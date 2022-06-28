@@ -19,7 +19,7 @@ use `git push origin *yourBranchName*` to push changes.
 
 when you've finished something, make a pull request through the github website.
 
-
+# Running the App
 make sure to run `npm i` to install dependencies before running the app the first time.
 
 use `npm start` to run the application.
