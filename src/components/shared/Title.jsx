@@ -6,8 +6,12 @@ export default function Title(props) {
       {/*
         If you want to put stuff inside of a component when you reference it
         in a different component, that stuff gets passed as props.children.
-        If we didn't render {props.children}, Using <Title>*stuff*</Title>
-        in other places wouldn't actually end up rendering *stuff*. 
+        If we didn't render {props.children} explicitly, when using
+        <Title>*stuff*</Title> in other places, nothing would be shown.
+
+        If you go to HeaderBanner.jsx, "Happy Fun React Crash Course!" is what
+        gets passed as props.children, but you can pass any jsx component as
+        props.children if you want.
       */}
       {props.children}
     </TitleWrapper>

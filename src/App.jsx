@@ -34,7 +34,6 @@ export default function App() {
 const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
-    // If you want to add non-standard fonts, you'll want to add the link inside public/index.html's <head> tag
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
       'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
       sans-serif;
@@ -55,10 +54,10 @@ const GlobalStyle = createGlobalStyle`
 // You can create a styled component of any standard HTML tag (e.g. if
 // you wanted to have an image, you could use styled.img).
 const AppWrapper = styled.div`
-  display: flex;          // Flex boxes are your best friend
-  flex-direction: column; // default direction is row
-  justify-content: start; // Alignment along flex axis
-  align-items: center;    // Alignment along perpendicular axis
-  height: 100vh;          // Learn your CSS units. They're useful to know.
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  height: 100vh;
   width: 100vw;
 `;

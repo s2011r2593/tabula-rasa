@@ -2,11 +2,9 @@ import styled from 'styled-components';
 
 import Title from '../shared/Title';
 
-// Note: theming is a bad example since you should use a ThemeProvider,
-// but like, this is just an example of responsive rendering so whatever
-
-// See how the HeaderBanner function takes in props as a parameter. You only
-// need to specify that if you're going to be passing props.
+// The HeaderBanner function takes in props as a parameter. You only
+// need to specify that if you're going to be passing props hence why
+// App didn't have/need a props argument.
 export default function HeaderBanner(props) {
   const handleClick = () => {
     // Recall that we passed in the following props:
@@ -14,7 +12,8 @@ export default function HeaderBanner(props) {
     // setTheme={(i) => {setTheme(i)}}
     // this means that props.theme = theme
     // and that props.setTheme = (i) => {setTheme(i)}
-    // where theme and setTheme were defined in the App component.
+    // where theme and setTheme (not props.theme and props.setTheme)
+    // were defined in the App component.
     props.setTheme(1 - props.theme);
   }
 
@@ -31,12 +30,11 @@ export default function HeaderBanner(props) {
   )
 }
 
-
+// Note: theming is a bad example of using props for styling since you should use a
+// ThemeProvider, but like, this is just an example of responsive rendering so whatever
 const Banner = styled.div`
-  // We gave Banner a prop theme equal to the HeaderBanner props.theme
-  // We can then access this in order to responsively adjust styling
-  // Also, if you don't know how ternary operators work, you can look them
-  // up since they're a very useful shorthand.
+  // We gave Banner a prop called theme equal to the HeaderBanner props.theme
+  // We can then access this in order to responsively adjust styling.
   background: ${props => (props.theme === 1) ? '#002b36' : '#fdf6e3'};
   transition: background 0.1s ease-out;
 

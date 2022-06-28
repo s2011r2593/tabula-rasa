@@ -95,7 +95,7 @@ export default function Main(props) {
 
       {/*
         for tracking the value of an input you need to store value in state
-        and set state on changes to the input field
+        and call set state on change
       */}
       <StyledInput
         placeholder='Enter the code (abc123)'
@@ -147,6 +147,5 @@ const HoverExample  = styled(FlexItem)`
     color: red;
     transition: color 0.5s;
   }
-
   // Stuff like ::before and ::after also work.
 `;

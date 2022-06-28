@@ -5,7 +5,6 @@ use `git checkout -b *yourNewBranchName*` to make a branch.
 
 use `git pull origin *baseBranchName*` to pull new changes from some base branch.
 
-
 use `git branch` to check what branch you're currently on
 
 use `git checkout *branchToSwitchTo*` to switch to a branch
@@ -15,7 +14,6 @@ use `git add .` to stage all changed files.
 use `git commit -m "*your commit message*"` to commit changes.
 
 use `git push origin *yourBranchName*` to push changes.
-
 
 when you've finished something, make a pull request through the github website.
 
