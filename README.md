@@ -1,5 +1,5 @@
 # What's up
-use `git clone *gitRepoUrl*` to get the repository. In this case, the repo url is `https://github.com/s2011r2593/happy-fun-react-crash-course.git`.
+use `git clone *gitRepoUrl*` to download the repository. In this case, the repo url is `https://github.com/s2011r2593/happy-fun-react-crash-course.git`.
 
 use `git checkout -b *yourNewBranchName*` to make a branch.
 
