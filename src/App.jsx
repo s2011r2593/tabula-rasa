@@ -1,38 +1,48 @@
 import { useState, useEffect } from 'react';
+import styled, { createGlobalStyle } from 'styled-components';
 
-import { createGlobalStyle } from "styled-components";
+import { ContextProvider } from './components/Context';
 
-import Form from "./components/Form";
-import Name from './components/Name';
+import Modal from './components/Modal';
+import List from './components/List';
 
-export default function App() {
-  const [data, setData] = useState([]);
-
-  const fetchData = () => {
-    fetch('https://gist.githubusercontent.com/s2011r2593/8bdf22e5e529d64119c8f7c46c332494/raw/8ee0eabb9e4c5eaa79783be5afa3b37d4cf348e5/hfrcc.json')
-      .then(res => res.json())
-      .then(data => {setData(data); console.log(data)});
-  }
-
+const App = () => {
   return (
-    <div>
-      <GlobalStyle />
-      <Form handleSubmit={fetchData} />
-      {
-        data.map((e, i) => {
-          return <Name color={e.color} key={i}>
-            {e.name}
-          </Name>
-        })
-      }
-    </div>
+    <ContextProvider>
+      <AppWrapper>
+        <GlobalStyle />
+        <Modal />
+        <Title>
+          Example
+        </Title>
+        <List />
+      </AppWrapper>
+    </ContextProvider>
   );
 }
 
+export default App;
+
 const GlobalStyle = createGlobalStyle`
   body {
-    margin: 40px;
-    font-family: sans-serif;
+    margin: 0;
+    font-family: 'Source Code Pro', monospace;
     font-size: 16px;
   }
+`;
+
+const AppWrapper = styled.div`
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
+  padding: 20px 40px;
+  display: flex;
+  flex-direction: column;
+`;
+
+const Title = styled.div`
+  width: 100%;
+  font-size: 32px;
+  font-weight: 900;
+  margin-bottom: 20px;
 `;
