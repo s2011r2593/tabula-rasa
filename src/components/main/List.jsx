@@ -93,7 +93,11 @@ const List = () => {
 export default List;
 
 const ListWrapper = styled.div`
-  width: calc(50% + 64px);
+  width: 100%;
   flex: 1;
   overflow-y: auto;
+
+  @media screen and (min-width: 900px) {
+    width: calc(50% + 64px);
+  }
 `;
