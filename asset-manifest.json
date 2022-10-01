@@ -1,11 +1,11 @@
 {
   "files": {
-    "main.js": "/tabula-rasa/static/js/main.16fec7f7.js",
+    "main.js": "/tabula-rasa/static/js/main.3cddeb89.js",
     "index.html": "/tabula-rasa/index.html",
-    "static/media/fi_x.svg": "/tabula-rasa/static/media/fi_x.0c8ba91b18852a7d28052c3e67086a1f.svg",
-    "main.16fec7f7.js.map": "/tabula-rasa/static/js/main.16fec7f7.js.map"
+    "static/media/fi_x.svg": "/tabula-rasa/static/media/fi_x.fc4e12bafb5324993d11482a50be1c8d.svg",
+    "main.3cddeb89.js.map": "/tabula-rasa/static/js/main.3cddeb89.js.map"
   },
   "entrypoints": [
-    "static/js/main.16fec7f7.js"
+    "static/js/main.3cddeb89.js"
   ]
 }
