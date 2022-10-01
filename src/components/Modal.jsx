@@ -55,7 +55,8 @@ const ModalContent = styled.div`
 
 const Exit = styled.img`
   position: absolute;
-  top: 12px;
+  top: 13px;
   right: 16px;
   cursor: pointer;
+  filter: invert(22%) sepia(81%) saturate(2610%) hue-rotate(349deg) brightness(84%) contrast(92%);
 `;
