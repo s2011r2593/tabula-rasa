@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 import { Context } from './Context';
 
-import Close from '../assets/fi_x.svg';
+import Close from '../../assets/fi_x.svg';
 
 const Modal = () => {
   const context = useContext(Context);
@@ -49,7 +49,7 @@ const ModalContent = styled.div`
   position: relative;
   padding: 40px;
   border-radius: 20px;
-  background: #fff;
+  background: ${props => props.theme.bg};
   cursor: default;
 `;
 
@@ -58,5 +58,5 @@ const Exit = styled.img`
   top: 13px;
   right: 16px;
   cursor: pointer;
-  filter: invert(22%) sepia(81%) saturate(2610%) hue-rotate(349deg) brightness(84%) contrast(92%);
+  filter: invert(59%) sepia(17%) saturate(6260%) hue-rotate(309deg) brightness(99%) contrast(104%);
 `;

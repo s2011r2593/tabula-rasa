@@ -1,33 +1,47 @@
-import { useState, useEffect } from 'react';
-import styled, { createGlobalStyle } from 'styled-components';
+import styled, { createGlobalStyle, ThemeProvider } from 'styled-components';
 
-import { ContextProvider } from './components/Context';
+import { ContextProvider } from './components/shared/Context';
 
-import Modal from './components/Modal';
-import List from './components/List';
+import Modal from './components/shared/Modal';
+import List from './components/main/List';
 
 const App = () => {
   return (
     <ContextProvider>
-      <AppWrapper>
-        <GlobalStyle />
-        <Modal />
-        <Title>
-          Example
-        </Title>
-        <List />
-      </AppWrapper>
+      <ThemeProvider theme={theme}>
+        <AppWrapper>
+          <GlobalStyle />
+          <Modal />
+          <Title>
+            &frasl; Todo &frasl;
+          </Title>
+          <List />
+        </AppWrapper>
+      </ThemeProvider>
     </ContextProvider>
   );
 }
 
 export default App;
 
+const theme = {
+  bg: '#2c292d',
+  fg: '#fdf9f3',
+  accent: '#ff6188',
+  1: '#fc9867',
+  2: '#ffd866',
+  3: '#a9dc76',
+  4: '#78dce8',
+  5: '#ab9df2',
+}
+
 const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
     font-family: 'Source Code Pro', monospace;
     font-size: 16px;
+    background: ${props => props.theme.bg};
+    color: ${props => props.theme.fg};
   }
 `;
 
@@ -45,4 +59,5 @@ const Title = styled.div`
   font-size: 32px;
   font-weight: 900;
   margin-bottom: 20px;
+  color: ${props => props.theme.accent};
 `;
